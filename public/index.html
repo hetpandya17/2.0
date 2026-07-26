@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The House of Water Treatment Chemicals</title>
+    <title>  The House of Water Treatment Chemicals</title>
     <!-- Font Awesome for Social Media & UI Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts for Calligraphy Typography -->
@@ -896,19 +896,20 @@
             border-radius: 16px;
             overflow: hidden;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-            border: 2px solid rgba(255, 255, 255, 0.2);
             opacity: 0;
             transform: translateX(40px);
             transition: all 1s ease 0.2s;
         }
 
-        .slideshow-img {
+            .slideshow-img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center;
+            background-color: transparent;
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
         }
@@ -1319,6 +1320,44 @@
             color: #EAE3DC;
         }
 
+        .team-featured {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .team-featured-item {
+            position: relative;
+            width: 320px;
+            height: 300px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 3px solid rgba(255, 215, 0, 0.5);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), 0 0 60px rgba(255, 215, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .team-featured-item:hover {
+            transform: scale(1.03);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5), 0 0 80px rgba(255, 215, 0, 0.15);
+        }
+
+        .team-featured-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background-color: #1a1a1a;
+            display: block;
+        }
+
+        @media (max-width: 576px) {
+            .team-featured-item {
+                width: 240px;
+                height: 240px;
+            }
+        }
+
         .gallery-section-title {
             font-family: 'Segoe UI', -apple-system, sans-serif;
             font-size: 0.9rem;
@@ -1332,7 +1371,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 18px;
         }
 
@@ -1340,14 +1379,16 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            height: 180px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            height: 220px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: #1a1a1a;
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center;
             transition: transform 0.4s ease;
         }
 
@@ -1750,13 +1791,12 @@
             </div>
 
 <div class="about-image-wrapper reveal" id="slideshowFrame">
-                <img src="images/team 1.png" alt="Our Team 1" class="slideshow-img active">
-                <img src="images/team 2.png" alt="Our Team 2" class="slideshow-img">
-                <img src="images/team 3.png" alt="Our Team 3" class="slideshow-img">
-                <img src="images/team 4.png" alt="Our Team 4" class="slideshow-img">
-<img src="images/team 5.jpeg" alt="Our Team 5" class="slideshow-img">
-                <img src="images/team 6.jpeg" alt="Our Team 6" class="slideshow-img">
-                <img src="images/team 7.png" alt="Our Team 7" class="slideshow-img">
+                <img src="images/service 1.jpeg" alt="Service 1" class="slideshow-img active">
+                <img src="images/service 2 (2).jpg" alt="Service 2" class="slideshow-img">
+                <img src="images/service 3.jpg" alt="Service 3" class="slideshow-img">
+                <img src="images/service 4.jpeg" alt="Service 4" class="slideshow-img">
+                <img src="images/service 5.jpeg" alt="Service 5" class="slideshow-img">
+                <img src="images/service 6.jpeg" alt="Service 6" class="slideshow-img">
             </div>
         </div>
     </section>
@@ -1915,15 +1955,22 @@
                 </div>
             </div>
 
-            <p class="gallery-section-title"><i class="fas fa-camera"></i> Workplace & Field Gallery</p>
+            <p class="gallery-section-title"><i class="fas fa-camera"></i> Our Team</p>
+
+            <!-- Featured Team Photo (Centered) -->
+            <div class="team-featured">
+                <div class="team-featured-item">
+                    <img src="images/team 3.png" alt="Featured Team">
+                </div>
+            </div>
 
 <div class="gallery-grid">
-                <div class="gallery-item"><img src="images/service 1.jpeg" alt="Service 1"></div>
-                <div class="gallery-item"><img src="images/service 2 (2).jpg" alt="Service 2"></div>
-                <div class="gallery-item"><img src="images/service 3.jpg" alt="Service 3"></div>
-                <div class="gallery-item"><img src="images/service 4.jpeg" alt="Service 4"></div>
-                <div class="gallery-item"><img src="images/service 5.jpeg" alt="Service 5"></div>
-                <div class="gallery-item"><img src="images/service 6.jpeg" alt="Service 6"></div>
+                <div class="gallery-item"><img src="images/team 1.png" alt="Team 1"></div>
+                <div class="gallery-item"><img src="images/team 2.png" alt="Team 2"></div>
+                <div class="gallery-item"><img src="images/team 4.png" alt="Team 4"></div>
+                <div class="gallery-item"><img src="images/team 5.jpeg" alt="Team 5"></div>
+                <div class="gallery-item"><img src="images/team 6.jpeg" alt="Team 6"></div>
+                <div class="gallery-item"><img src="images/team 7.png" alt="Team 7"></div>
             </div>
         </div>
     </div>
